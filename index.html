@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>URL Extractor</title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <h1>URL Extractor</h1>
+    <form method="post">
+      <textarea name="text" rows="10" cols="50"></textarea><br>
+      <input type="submit" value="Extract URLs">
+    </form>
+    {% if urls %}
+      <h2>Extracted URLs:</h2>
+      <ul>
+      {% for url in urls %}
+        <li>{{ url }}</li>
+      {% endfor %}
+      </ul>
+    {% endif %}
+  </body>
+</html>
